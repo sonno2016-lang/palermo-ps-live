@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pronto Soccorso Palermo — Accessi in tempo reale</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4F7F7; --panel:#FFFFFF; --ink:#16262B; --ink-soft:#566B71;
+    --teal:#0B7285; --teal-deep:#075466; --line:#DCE6E7;
+    --bianco:#C9D2D3; --verde:#2F9E5B; --giallo:#E8A317; --arancione:#E8720C; --rosso:#D64545;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:820px;margin:0 auto;padding:56px 24px 80px;}
+  header{margin-bottom:32px;}
+  .eyebrow{display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.06em;color:var(--teal-deep);text-transform:uppercase;margin-bottom:14px;}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--rosso);box-shadow:0 0 0 0 rgba(214,69,69,.6);animation:pulse 2s infinite;}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(214,69,69,.45);}70%{box-shadow:0 0 0 8px rgba(214,69,69,0);}100%{box-shadow:0 0 0 0 rgba(214,69,69,0);}}
+  h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(28px,4.2vw,38px);line-height:1.15;margin:0 0 12px;}
+  h1 span{color:var(--teal);}
+  .sub{color:var(--ink-soft);font-size:15px;line-height:1.55;max-width:56ch;}
+  .updated{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);margin-top:16px;}
+  .list{display:flex;flex-direction:column;gap:14px;margin-top:28px;}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px 22px;position:relative;overflow:hidden;}
+  .card-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+  .card-title{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;}
+  .card-meta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-soft);}
+  .triage-row{display:flex;gap:10px;flex-wrap:wrap;}
+  .chip{flex:1;min-width:78px;border-radius:8px;padding:10px 12px;background:#F7FAFA;border:1px solid var(--line);text-align:center;}
+  .chip .n{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;line-height:1;}
+  .chip .l{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft);margin-top:4px;}
+  .chip.rosso .n{color:var(--rosso);} .chip.arancione .n{color:var(--arancione);}
+  .chip.giallo .n{color:var(--giallo);} .chip.azzurro .n{color:#2E86C1;}
+  .chip.verde .n{color:var(--verde);} .chip.bianco .n{color:#8A9A9C;}
+  .error-msg{color:var(--rosso);font-family:'IBM Plex Mono',monospace;font-size:12.5px;}
+  .empty-msg{color:var(--ink-soft);font-family:'IBM Plex Mono',monospace;font-size:12.5px;padding:40px 0;text-align:center;}
+  footer{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-soft);line-height:1.6;}
+  code{background:#EEF3F3;padding:1px 5px;border-radius:4px;font-family:'IBM Plex Mono',monospace;}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow"><span class="dot"></span> Accessi in tempo reale</div>
+      <h1>Pronto Soccorso <span>Palermo</span></h1>
+      <p class="sub">Dati letti da <code>data.json</code>, generato dallo script <code>palermo_ps_scraper.py</code>.</p>
+      <div class="updated" id="updated"></div>
+    </header>
+
+    <div class="list" id="list">
+      <div class="empty-msg">Caricamento dati…</div>
+    </div>
+
+    <footer>
+      Per aggiornare i numeri, rilancia lo script: <code>python palermo_ps_scraper.py --json data.json</code>, poi ricarica questa pagina.<br>
+      Questa pagina va aperta tramite un mini server locale (non a doppio click sul file), altrimenti il browser blocca la lettura di <code>data.json</code>. Esempio: <code>python -m http.server</code> nella stessa cartella, poi vai su <code>http://localhost:8000</code>.
+    </footer>
+  </div>
+
+<script>
+const NOMI_COLORI = {
+  rosso: 'Rosso', arancione: 'Arancione', giallo: 'Giallo',
+  azzurro: 'Azzurro', verde: 'Verde', bianco: 'Bianco'
+};
+
+function estraiValore(campo) {
+  if (campo === null || campo === undefined) return null;
+  if (typeof campo === 'object') return campo.in_attesa ?? null;
+  return campo;
+}
+
+function creaCard(chiaveFonte, fonte) {
+  const div = document.createElement('div');
+  div.className = 'card';
+
+  if (fonte.errore) {
+    div.innerHTML = `
+      <div class="card-head">
+        <div class="card-title">${chiaveFonte}</div>
+      </div>
+      <div class="error-msg">Errore nel recupero dati: ${fonte.errore}</div>`;
+    return div;
+  }
+
+  const nome = fonte.nome || chiaveFonte;
+  const colori = Object.keys(NOMI_COLORI).filter(c => fonte.data && c in fonte.data);
+
+  const chips = colori.map(colore => {
+    const v = estraiValore(fonte.data[colore]);
+    return `<div class="chip ${colore}">
+      <div class="n">${v ?? '–'}</div>
+      <div class="l">${NOMI_COLORI[colore]}</div>
+    </div>`;
+  }).join('');
+
+  const nota = fonte.nota ? `<div class="card-meta">${fonte.nota}</div>` : '';
+
+  div.innerHTML = `
+    <div class="card-head">
+      <div class="card-title">${nome}</div>
+      ${nota}
+    </div>
+    <div class="triage-row">${chips || '<span class="card-meta">Nessun dato di dettaglio disponibile</span>'}</div>`;
+  return div;
+}
+
+async function carica() {
+  const list = document.getElementById('list');
+  try {
+    const res = await fetch('data.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('data.json non trovato (' + res.status + ')');
+    const dati = await res.json();
+
+    list.innerHTML = '';
+    Object.entries(dati).forEach(([chiave, fonte]) => {
+      list.appendChild(creaCard(chiave, fonte));
+    });
+
+    document.getElementById('updated').textContent =
+      'Pagina caricata: ' + new Date().toLocaleString('it-IT');
+  } catch (e) {
+    list.innerHTML = `<div class="error-msg">Impossibile leggere data.json: ${e.message}.<br>
+      Assicurati di aver generato il file (--json data.json) e di servire la cartella con un server locale.</div>`;
+  }
+}
+
+carica();
+</script>
+</body>
+</html>

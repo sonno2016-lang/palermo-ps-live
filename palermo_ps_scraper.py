@@ -16,9 +16,16 @@ Uso:
 import json
 import re
 import sys
+import time
 import argparse
 import requests
+import urllib3
 from bs4 import BeautifulSoup
+
+# Le richieste usano verify=False perché alcuni siti PA hanno certificati
+# scaduti/self-signed. Disabilitiamo qui il warning una volta sola, in modo
+# esplicito, invece di farlo sparire silenziosamente ad ogni richiesta.
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 HEADERS_DEFAULT = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -26,6 +33,18 @@ HEADERS_DEFAULT = {
 }
 
 TIMEOUT = 12
+RATE_LIMIT_SECONDS = 1.5  # pausa tra una fonte e l'altra, per non martellare i siti
+
+
+def _tutti_none(d):
+    """True se un dizionario (anche annidato) non contiene nessun valore utile."""
+    if d is None:
+        return True
+    if isinstance(d, dict):
+        return all(_tutti_none(v) for v in d.values())
+    if isinstance(d, list):
+        return all(_tutti_none(v) for v in d)
+    return False
 
 
 # ---------------------------------------------------------------------------
@@ -221,7 +240,15 @@ def get_ospedali_riuniti(presidio: str):
     Verificala tu prima di usarla in modo continuativo.
     """
     url = "https://www.ospedaliriunitipalermo.it/amministrazione-trasparente/servizi-erogati/liste-di-attesa/pazienti-in-attesa-al-pronto-soccorso/"
-    r = requests.get(url, headers=HEADERS_DEFAULT, timeout=TIMEOUT, verify=False)
+    headers = {
+        **HEADERS_DEFAULT,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Referer": "https://www.ospedaliriunitipalermo.it/",
+        "Connection": "keep-alive",
+        "Upgrade-Insecure-Requests": "1",
+    }
+    r = requests.get(url, headers=headers, timeout=TIMEOUT, verify=False)
     r.raise_for_status()
     soup = BeautifulSoup(r.text, "html.parser")
 
@@ -240,6 +267,13 @@ def get_ospedali_riuniti(presidio: str):
     colori_ordine = ["rosso", "giallo", "verde", "bianco"]
     data = {colore: cell(i + 1, 2) for i, colore in enumerate(colori_ordine)}
 
+    if _tutti_none(data):
+        raise ValueError(
+            "Nessun valore estratto: i selettori CSS potrebbero essere cambiati "
+            "o la struttura della pagina è diversa da quella attesa. "
+            "Verifica manualmente i selettori prima di fidarti di questa fonte."
+        )
+
     return {
         "nome": f"Palermo - {'Villa Sofia' if presidio == 'villasofia' else 'Cervello'}",
         "data": data,
@@ -257,7 +291,15 @@ def get_civico():
     Non verificata dal mio ambiente.
     """
     url = "https://www.arnascivico.it/index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139"
-    r = requests.get(url, headers=HEADERS_DEFAULT, timeout=TIMEOUT, verify=False)
+    headers = {
+        **HEADERS_DEFAULT,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Referer": "https://www.arnascivico.it/",
+        "Connection": "keep-alive",
+        "Upgrade-Insecure-Requests": "1",
+    }
+    r = requests.get(url, headers=headers, timeout=TIMEOUT, verify=False)
     r.raise_for_status()
     soup = BeautifulSoup(r.text, "html.parser")
 
@@ -285,6 +327,12 @@ def get_civico():
     for chiave, regex in pattern.items():
         m = re.search(regex, testo_completo, re.IGNORECASE)
         extra[chiave] = m.group(1) if m else None
+
+    if _tutti_none(righe_out) and _tutti_none(extra):
+        raise ValueError(
+            "Nessun valore estratto: né la tabella né il testo libero hanno prodotto dati. "
+            "I selettori/regex potrebbero non corrispondere più alla pagina attuale."
+        )
 
     return {
         "nome": "Palermo - Civico",
@@ -319,11 +367,13 @@ def main():
     fonti_da_eseguire = args.solo or list(FONTI.keys())
     risultati = {}
 
-    for nome_fonte in fonti_da_eseguire:
+    for i, nome_fonte in enumerate(fonti_da_eseguire):
         try:
             risultati[nome_fonte] = FONTI[nome_fonte]()
         except Exception as e:
             risultati[nome_fonte] = {"errore": str(e)}
+        if i < len(fonti_da_eseguire) - 1:
+            time.sleep(RATE_LIMIT_SECONDS)
 
     output = json.dumps(risultati, ensure_ascii=False, indent=2)
     print(output)

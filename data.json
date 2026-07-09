@@ -9,14 +9,14 @@
         "totale": 14
       },
       "arancione": {
-        "in_attesa": 2,
-        "in_trattamento": 5,
-        "in_osservazione": 1,
-        "totale": 8
+        "in_attesa": 1,
+        "in_trattamento": 7,
+        "in_osservazione": 2,
+        "totale": 10
       },
       "verde": {
-        "in_attesa": 4,
-        "in_trattamento": 1,
+        "in_attesa": 3,
+        "in_trattamento": 2,
         "in_osservazione": 0,
         "totale": 5
       },
@@ -32,9 +32,9 @@
       "indice_sovraffollamento": null
     },
     "totali": {
-      "in_attesa": 6,
-      "in_trattamento": 17,
-      "in_osservazione": 4
+      "in_attesa": 4,
+      "in_trattamento": 20,
+      "in_osservazione": 5
     }
   },
   "buccheri": {
@@ -49,7 +49,7 @@
         "in_trattamento": 0
       },
       "verde": {
-        "in_attesa": 11,
+        "in_attesa": 12,
         "in_trattamento": 2
       },
       "bianco": {
@@ -58,12 +58,12 @@
       }
     },
     "totali": {
-      "pazienti": 20
+      "pazienti": 16
     },
     "extra": {
-      "accessi_giorno": 109,
-      "accessi_anno": 21363,
-      "indice_sovraffollamento": "300%"
+      "accessi_giorno": 0,
+      "accessi_anno": 21368,
+      "indice_sovraffollamento": "258%"
     }
   },
   "policlinico": {
@@ -72,44 +72,44 @@
       "rosso": {
         "in_attesa": 0,
         "in_trattamento": "2",
-        "carichi_urgenti": 9.0,
+        "carichi_urgenti": 7.0,
         "tempo_attesa": "27m "
       },
       "arancione": {
-        "in_attesa": 0,
-        "in_trattamento": "2",
-        "carichi_urgenti": 9.0,
+        "in_attesa": 1.0,
+        "in_trattamento": "1",
+        "carichi_urgenti": 4.0,
         "tempo_attesa": "2h  34m "
       },
       "azzurro": {
-        "in_attesa": 10.0,
-        "in_trattamento": "10",
-        "carichi_urgenti": 45.0,
+        "in_attesa": 3.0,
+        "in_trattamento": "13",
+        "carichi_urgenti": 48.0,
         "tempo_attesa": "3h  15m "
       },
       "verde": {
-        "in_attesa": 7.0,
-        "in_trattamento": "8",
-        "carichi_urgenti": 36.0,
+        "in_attesa": 6.0,
+        "in_trattamento": "10",
+        "carichi_urgenti": 37.0,
         "tempo_attesa": "2h  5m "
       },
       "bianco": {
-        "in_attesa": 3.0,
-        "in_trattamento": 0,
-        "carichi_urgenti": 0.0,
-        "tempo_attesa": "3h  46m "
+        "in_attesa": 0,
+        "in_trattamento": "1",
+        "carichi_urgenti": 4.0,
+        "tempo_attesa": "3h  49m "
       }
     },
     "totali": {
-      "in_attesa": 20.0,
+      "in_attesa": 10.0,
       "in_trattamento": 0
     },
     "extra": {
-      "permanenza_24h": 40,
-      "permanenza_24_48h": 5,
+      "permanenza_24h": 35,
+      "permanenza_24_48h": 6,
       "permanenza_oltre_24h": 3,
       "posti_tecnici_presidiati": 25,
-      "indice_sovraffollamento": 192.0
+      "indice_sovraffollamento": 176.0
     }
   },
   "villasofia": {
@@ -119,6 +119,6 @@
     "errore": "HTTPSConnectionPool(host='www.ospedaliriunitipalermo.it', port=443): Max retries exceeded with url: /amministrazione-trasparente/servizi-erogati/liste-di-attesa/pazienti-in-attesa-al-pronto-soccorso/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ospedaliriunitipalermo.it', port=443): Failed to establish a new connection: [Errno 22] Invalid argument\"))"
   },
   "civico": {
-    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7fc98fe25cd0>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
+    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f3962dbbb50>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
   }
 }

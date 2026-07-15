@@ -10,15 +10,15 @@
       },
       "arancione": {
         "in_attesa": 0,
-        "in_trattamento": 9,
+        "in_trattamento": 8,
         "in_osservazione": 0,
-        "totale": 9
+        "totale": 8
       },
       "verde": {
         "in_attesa": 0,
-        "in_trattamento": 2,
+        "in_trattamento": 1,
         "in_osservazione": 1,
-        "totale": 3
+        "totale": 2
       },
       "bianco": {
         "in_attesa": 0,
@@ -33,7 +33,7 @@
     },
     "totali": {
       "in_attesa": 0,
-      "in_trattamento": 16,
+      "in_trattamento": 14,
       "in_osservazione": 2
     }
   },
@@ -49,8 +49,8 @@
         "in_trattamento": 0
       },
       "verde": {
-        "in_attesa": 0,
-        "in_trattamento": 3
+        "in_attesa": 1,
+        "in_trattamento": 6
       },
       "bianco": {
         "in_attesa": 0,
@@ -58,16 +58,59 @@
       }
     },
     "totali": {
-      "pazienti": 1
+      "pazienti": 2
     },
     "extra": {
-      "accessi_giorno": 5,
-      "accessi_anno": 21981,
-      "indice_sovraffollamento": "175%"
+      "accessi_giorno": 12,
+      "accessi_anno": 21988,
+      "indice_sovraffollamento": "200%"
     }
   },
   "policlinico": {
-    "errore": "HTTPSConnectionPool(host='www.policlinico.pa.it', port=443): Max retries exceeded with url: /o/PoliclinicoPaRestBuilder/v1.0/ProntoSoccorsoIndici (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.policlinico.pa.it', port=443) at 0x7f680fbe7e90>, 'Connection to www.policlinico.pa.it timed out. (connect timeout=12)'))"
+    "nome": "Palermo - Policlinico",
+    "data": {
+      "rosso": {
+        "in_attesa": 0,
+        "in_trattamento": 0,
+        "carichi_urgenti": 0.0,
+        "tempo_attesa": "28m "
+      },
+      "arancione": {
+        "in_attesa": 0,
+        "in_trattamento": "3",
+        "carichi_urgenti": 21.0,
+        "tempo_attesa": "2h  30m "
+      },
+      "azzurro": {
+        "in_attesa": 6.0,
+        "in_trattamento": "7",
+        "carichi_urgenti": 50.0,
+        "tempo_attesa": "3h  8m "
+      },
+      "verde": {
+        "in_attesa": 6.0,
+        "in_trattamento": "4",
+        "carichi_urgenti": 29.0,
+        "tempo_attesa": "2h  5m "
+      },
+      "bianco": {
+        "in_attesa": 1.0,
+        "in_trattamento": 0,
+        "carichi_urgenti": 0.0,
+        "tempo_attesa": "3h  40m "
+      }
+    },
+    "totali": {
+      "in_attesa": 13.0,
+      "in_trattamento": 0
+    },
+    "extra": {
+      "permanenza_24h": 30,
+      "permanenza_24_48h": 1,
+      "permanenza_oltre_24h": 1,
+      "posti_tecnici_presidiati": 25,
+      "indice_sovraffollamento": 128.0
+    }
   },
   "villasofia": {
     "errore": "HTTPSConnectionPool(host='www.ospedaliriunitipalermo.it', port=443): Max retries exceeded with url: /amministrazione-trasparente/servizi-erogati/liste-di-attesa/pazienti-in-attesa-al-pronto-soccorso/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ospedaliriunitipalermo.it', port=443): Failed to establish a new connection: [Errno 22] Invalid argument\"))"
@@ -76,6 +119,6 @@
     "errore": "HTTPSConnectionPool(host='www.ospedaliriunitipalermo.it', port=443): Max retries exceeded with url: /amministrazione-trasparente/servizi-erogati/liste-di-attesa/pazienti-in-attesa-al-pronto-soccorso/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ospedaliriunitipalermo.it', port=443): Failed to establish a new connection: [Errno 22] Invalid argument\"))"
   },
   "civico": {
-    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f680fbc5c10>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
+    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f343f683c10>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
   }
 }

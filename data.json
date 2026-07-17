@@ -3,22 +3,22 @@
     "nome": "Palermo - Ingrassia",
     "data": {
       "rosso": {
-        "in_attesa": 1,
-        "in_trattamento": 9,
+        "in_attesa": 0,
+        "in_trattamento": 11,
         "in_osservazione": 1,
-        "totale": 11
+        "totale": 12
       },
       "arancione": {
-        "in_attesa": 3,
+        "in_attesa": 2,
         "in_trattamento": 6,
         "in_osservazione": 2,
-        "totale": 11
+        "totale": 10
       },
       "verde": {
         "in_attesa": 1,
-        "in_trattamento": 4,
+        "in_trattamento": 3,
         "in_osservazione": 2,
-        "totale": 7
+        "totale": 6
       },
       "bianco": {
         "in_attesa": 0,
@@ -32,8 +32,8 @@
       "indice_sovraffollamento": null
     },
     "totali": {
-      "in_attesa": 5,
-      "in_trattamento": 21,
+      "in_attesa": 3,
+      "in_trattamento": 22,
       "in_osservazione": 5
     }
   },
@@ -49,8 +49,8 @@
         "in_trattamento": 0
       },
       "verde": {
-        "in_attesa": 8,
-        "in_trattamento": 5
+        "in_attesa": 2,
+        "in_trattamento": 11
       },
       "bianco": {
         "in_attesa": 0,
@@ -58,12 +58,12 @@
       }
     },
     "totali": {
-      "pazienti": 10
+      "pazienti": 5
     },
     "extra": {
-      "accessi_giorno": 38,
-      "accessi_anno": 22244,
-      "indice_sovraffollamento": "346%"
+      "accessi_giorno": 50,
+      "accessi_anno": 22256,
+      "indice_sovraffollamento": "362%"
     }
   },
   "policlinico": {
@@ -72,44 +72,44 @@
       "rosso": {
         "in_attesa": 0,
         "in_trattamento": "2",
-        "carichi_urgenti": 7.0,
+        "carichi_urgenti": 9.0,
         "tempo_attesa": "28m "
       },
       "arancione": {
         "in_attesa": 0,
         "in_trattamento": "4",
-        "carichi_urgenti": 14.0,
+        "carichi_urgenti": 17.0,
         "tempo_attesa": "2h  25m "
       },
       "azzurro": {
-        "in_attesa": 3.0,
-        "in_trattamento": "10",
-        "carichi_urgenti": 36.0,
+        "in_attesa": 4.0,
+        "in_trattamento": "9",
+        "carichi_urgenti": 39.0,
         "tempo_attesa": "3h  9m "
       },
       "verde": {
-        "in_attesa": 4.0,
-        "in_trattamento": "12",
-        "carichi_urgenti": 43.0,
+        "in_attesa": 2.0,
+        "in_trattamento": "8",
+        "carichi_urgenti": 35.0,
         "tempo_attesa": "2h  5m "
       },
       "bianco": {
         "in_attesa": 0,
         "in_trattamento": 0,
         "carichi_urgenti": 0.0,
-        "tempo_attesa": "3h  41m "
+        "tempo_attesa": "3h  42m "
       }
     },
     "totali": {
-      "in_attesa": 7.0,
+      "in_attesa": 6.0,
       "in_trattamento": 0
     },
     "extra": {
-      "permanenza_24h": 33,
+      "permanenza_24h": 28,
       "permanenza_24_48h": 2,
       "permanenza_oltre_24h": 2,
       "posti_tecnici_presidiati": 25,
-      "indice_sovraffollamento": 148.0
+      "indice_sovraffollamento": 128.0
     }
   },
   "villasofia": {
@@ -119,6 +119,6 @@
     "errore": "HTTPSConnectionPool(host='www.ospedaliriunitipalermo.it', port=443): Max retries exceeded with url: /amministrazione-trasparente/servizi-erogati/liste-di-attesa/pazienti-in-attesa-al-pronto-soccorso/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ospedaliriunitipalermo.it', port=443): Failed to establish a new connection: [Errno 22] Invalid argument\"))"
   },
   "civico": {
-    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7fdc88427050>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
+    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7fdb52dea310>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
   }
 }

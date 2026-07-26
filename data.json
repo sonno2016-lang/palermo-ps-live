@@ -1,41 +1,6 @@
 {
   "ingrassia": {
-    "nome": "Palermo - Ingrassia",
-    "data": {
-      "rosso": {
-        "in_attesa": 1,
-        "in_trattamento": 9,
-        "in_osservazione": 2,
-        "totale": 12
-      },
-      "arancione": {
-        "in_attesa": 0,
-        "in_trattamento": 8,
-        "in_osservazione": 1,
-        "totale": 9
-      },
-      "verde": {
-        "in_attesa": 7,
-        "in_trattamento": 1,
-        "in_osservazione": 1,
-        "totale": 9
-      },
-      "bianco": {
-        "in_attesa": 0,
-        "in_trattamento": 0,
-        "in_osservazione": 0,
-        "totale": 0
-      }
-    },
-    "extra": {
-      "numero_posti_tecnico": null,
-      "indice_sovraffollamento": null
-    },
-    "totali": {
-      "in_attesa": 8,
-      "in_trattamento": 18,
-      "in_osservazione": 4
-    }
+    "errore": "HTTPSConnectionPool(host='www.asppalermo.org', port=443): Max retries exceeded with url: /attese_ps/index_mod2.php (Caused by NameResolutionError(\"HTTPSConnection(host='www.asppalermo.org', port=443): Failed to resolve 'www.asppalermo.org' ([Errno -3] Temporary failure in name resolution)\"))"
   },
   "buccheri": {
     "nome": "Palermo - Buccheri La Ferla",
@@ -50,7 +15,7 @@
       },
       "verde": {
         "in_attesa": 3,
-        "in_trattamento": 2
+        "in_trattamento": 4
       },
       "bianco": {
         "in_attesa": 0,
@@ -58,12 +23,12 @@
       }
     },
     "totali": {
-      "pazienti": 6
+      "pazienti": 9
     },
     "extra": {
-      "accessi_giorno": 67,
-      "accessi_anno": 23367,
-      "indice_sovraffollamento": "267%"
+      "accessi_giorno": 73,
+      "accessi_anno": 23373,
+      "indice_sovraffollamento": "300%"
     }
   },
   "policlinico": {
@@ -72,25 +37,25 @@
       "rosso": {
         "in_attesa": 0,
         "in_trattamento": "3",
-        "carichi_urgenti": 8.0,
+        "carichi_urgenti": 9.0,
         "tempo_attesa": "29m "
       },
       "arancione": {
         "in_attesa": 3.0,
-        "in_trattamento": "12",
-        "carichi_urgenti": 33.0,
+        "in_trattamento": "8",
+        "carichi_urgenti": 24.0,
         "tempo_attesa": "2h  19m "
       },
       "azzurro": {
         "in_attesa": 3.0,
-        "in_trattamento": "15",
-        "carichi_urgenti": 42.0,
+        "in_trattamento": "16",
+        "carichi_urgenti": 48.0,
         "tempo_attesa": "3h  4m "
       },
       "verde": {
         "in_attesa": 6.0,
         "in_trattamento": "6",
-        "carichi_urgenti": 17.0,
+        "carichi_urgenti": 18.0,
         "tempo_attesa": "2h  3m "
       },
       "bianco": {
@@ -105,11 +70,11 @@
       "in_trattamento": 0
     },
     "extra": {
-      "permanenza_24h": 34,
+      "permanenza_24h": 31,
       "permanenza_24_48h": 12,
       "permanenza_oltre_24h": 9,
       "posti_tecnici_presidiati": 25,
-      "indice_sovraffollamento": 220.0
+      "indice_sovraffollamento": 208.0
     }
   },
   "villasofia": {
@@ -119,6 +84,6 @@
     "errore": "HTTPSConnectionPool(host='www.ospedaliriunitipalermo.it', port=443): Max retries exceeded with url: /amministrazione-trasparente/servizi-erogati/liste-di-attesa/pazienti-in-attesa-al-pronto-soccorso/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ospedaliriunitipalermo.it', port=443): Failed to establish a new connection: [Errno 22] Invalid argument\"))"
   },
   "civico": {
-    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f1dcab4e610>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
+    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f88ae3ef610>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
   }
 }

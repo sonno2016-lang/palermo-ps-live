@@ -3,28 +3,28 @@
     "nome": "Palermo - Ingrassia",
     "data": {
       "rosso": {
-        "in_attesa": 0,
-        "in_trattamento": 9,
+        "in_attesa": 1,
+        "in_trattamento": 8,
         "in_osservazione": 2,
         "totale": 11
       },
       "arancione": {
         "in_attesa": 0,
-        "in_trattamento": 4,
+        "in_trattamento": 5,
         "in_osservazione": 2,
-        "totale": 6
+        "totale": 7
       },
       "verde": {
         "in_attesa": 0,
-        "in_trattamento": 3,
+        "in_trattamento": 1,
         "in_osservazione": 0,
-        "totale": 3
+        "totale": 1
       },
       "bianco": {
         "in_attesa": 0,
-        "in_trattamento": 4,
+        "in_trattamento": 2,
         "in_osservazione": 0,
-        "totale": 4
+        "totale": 2
       }
     },
     "extra": {
@@ -32,8 +32,8 @@
       "indice_sovraffollamento": null
     },
     "totali": {
-      "in_attesa": 0,
-      "in_trattamento": 20,
+      "in_attesa": 1,
+      "in_trattamento": 16,
       "in_osservazione": 4
     }
   },
@@ -49,8 +49,8 @@
         "in_trattamento": 0
       },
       "verde": {
-        "in_attesa": 5,
-        "in_trattamento": 5
+        "in_attesa": 8,
+        "in_trattamento": 4
       },
       "bianco": {
         "in_attesa": 0,
@@ -58,12 +58,12 @@
       }
     },
     "totali": {
-      "pazienti": 9
+      "pazienti": 12
     },
     "extra": {
-      "accessi_giorno": 24,
-      "accessi_anno": 23692,
-      "indice_sovraffollamento": "254%"
+      "accessi_giorno": 44,
+      "accessi_anno": 23712,
+      "indice_sovraffollamento": "315%"
     }
   },
   "policlinico": {
@@ -71,45 +71,45 @@
     "data": {
       "rosso": {
         "in_attesa": 0,
-        "in_trattamento": "5",
-        "carichi_urgenti": 13.0,
+        "in_trattamento": "4",
+        "carichi_urgenti": 10.0,
         "tempo_attesa": "29m "
       },
       "arancione": {
         "in_attesa": 1.0,
-        "in_trattamento": "13",
-        "carichi_urgenti": 34.0,
+        "in_trattamento": "12",
+        "carichi_urgenti": 30.0,
         "tempo_attesa": "2h  27m "
       },
       "azzurro": {
-        "in_attesa": 6.0,
-        "in_trattamento": "12",
-        "carichi_urgenti": 32.0,
+        "in_attesa": 7.0,
+        "in_trattamento": "11",
+        "carichi_urgenti": 28.0,
         "tempo_attesa": "3h  11m "
       },
       "verde": {
-        "in_attesa": 8.0,
-        "in_trattamento": "8",
-        "carichi_urgenti": 21.0,
+        "in_attesa": 11.0,
+        "in_trattamento": "13",
+        "carichi_urgenti": 33.0,
         "tempo_attesa": "2h  6m "
       },
       "bianco": {
-        "in_attesa": 1.0,
+        "in_attesa": 0,
         "in_trattamento": 0,
         "carichi_urgenti": 0.0,
-        "tempo_attesa": "3h  52m "
+        "tempo_attesa": "3h  53m "
       }
     },
     "totali": {
-      "in_attesa": 16.0,
+      "in_attesa": 19.0,
       "in_trattamento": 0
     },
     "extra": {
-      "permanenza_24h": 50,
-      "permanenza_24_48h": 9,
-      "permanenza_oltre_24h": 1,
+      "permanenza_24h": 52,
+      "permanenza_24_48h": 10,
+      "permanenza_oltre_24h": 2,
       "posti_tecnici_presidiati": 25,
-      "indice_sovraffollamento": 240.0
+      "indice_sovraffollamento": 256.0
     }
   },
   "villasofia": {
@@ -119,6 +119,6 @@
     "errore": "HTTPSConnectionPool(host='www.ospedaliriunitipalermo.it', port=443): Max retries exceeded with url: /amministrazione-trasparente/servizi-erogati/liste-di-attesa/pazienti-in-attesa-al-pronto-soccorso/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ospedaliriunitipalermo.it', port=443): Failed to establish a new connection: [Errno 22] Invalid argument\"))"
   },
   "civico": {
-    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f6d16673ed0>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
+    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7fbcdf621cd0>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
   }
 }

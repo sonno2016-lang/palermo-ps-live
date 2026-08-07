@@ -3,22 +3,22 @@
     "nome": "Palermo - Ingrassia",
     "data": {
       "rosso": {
-        "in_attesa": 2,
-        "in_trattamento": 7,
+        "in_attesa": 1,
+        "in_trattamento": 8,
         "in_osservazione": 2,
         "totale": 11
       },
       "arancione": {
-        "in_attesa": 2,
-        "in_trattamento": 3,
-        "in_osservazione": 1,
-        "totale": 6
-      },
-      "verde": {
         "in_attesa": 4,
         "in_trattamento": 3,
+        "in_osservazione": 1,
+        "totale": 8
+      },
+      "verde": {
+        "in_attesa": 3,
+        "in_trattamento": 5,
         "in_osservazione": 0,
-        "totale": 7
+        "totale": 8
       },
       "bianco": {
         "in_attesa": 0,
@@ -33,7 +33,7 @@
     },
     "totali": {
       "in_attesa": 8,
-      "in_trattamento": 13,
+      "in_trattamento": 16,
       "in_osservazione": 3
     }
   },
@@ -49,7 +49,7 @@
         "in_trattamento": 0
       },
       "verde": {
-        "in_attesa": 14,
+        "in_attesa": 16,
         "in_trattamento": 1
       },
       "bianco": {
@@ -61,9 +61,9 @@
       "pazienti": 17
     },
     "extra": {
-      "accessi_giorno": 114,
-      "accessi_anno": 24878,
-      "indice_sovraffollamento": "367%"
+      "accessi_giorno": 116,
+      "accessi_anno": 24880,
+      "indice_sovraffollamento": "358%"
     }
   },
   "policlinico": {
@@ -72,44 +72,44 @@
       "rosso": {
         "in_attesa": 0,
         "in_trattamento": "3",
-        "carichi_urgenti": 19.0,
+        "carichi_urgenti": 14.0,
         "tempo_attesa": "19m "
       },
       "arancione": {
-        "in_attesa": 2.0,
-        "in_trattamento": "4",
-        "carichi_urgenti": 25.0,
+        "in_attesa": 0,
+        "in_trattamento": "6",
+        "carichi_urgenti": 27.0,
         "tempo_attesa": "2h  13m "
       },
       "azzurro": {
         "in_attesa": 5.0,
-        "in_trattamento": "5",
-        "carichi_urgenti": 31.0,
-        "tempo_attesa": "3h  10m "
+        "in_trattamento": "7",
+        "carichi_urgenti": 32.0,
+        "tempo_attesa": "3h  9m "
       },
       "verde": {
-        "in_attesa": 2.0,
-        "in_trattamento": "4",
-        "carichi_urgenti": 25.0,
-        "tempo_attesa": "2h  6m "
+        "in_attesa": 1.0,
+        "in_trattamento": "5",
+        "carichi_urgenti": 23.0,
+        "tempo_attesa": "2h  7m "
       },
       "bianco": {
-        "in_attesa": 1.0,
-        "in_trattamento": 0,
-        "carichi_urgenti": 0.0,
-        "tempo_attesa": "3h  27m "
+        "in_attesa": 0,
+        "in_trattamento": "1",
+        "carichi_urgenti": 5.0,
+        "tempo_attesa": "3h  26m "
       }
     },
     "totali": {
-      "in_attesa": 10.0,
+      "in_attesa": 6.0,
       "in_trattamento": 0
     },
     "extra": {
-      "permanenza_24h": 22,
-      "permanenza_24_48h": 5,
-      "permanenza_oltre_24h": 3,
+      "permanenza_24h": 24,
+      "permanenza_24_48h": 4,
+      "permanenza_oltre_24h": 4,
       "posti_tecnici_presidiati": 25,
-      "indice_sovraffollamento": 120.0
+      "indice_sovraffollamento": 128.0
     }
   },
   "villasofia": {
@@ -119,6 +119,6 @@
     "errore": "HTTPSConnectionPool(host='www.ospedaliriunitipalermo.it', port=443): Max retries exceeded with url: /amministrazione-trasparente/servizi-erogati/liste-di-attesa/pazienti-in-attesa-al-pronto-soccorso/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ospedaliriunitipalermo.it', port=443): Failed to establish a new connection: [Errno 22] Invalid argument\"))"
   },
   "civico": {
-    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f0bd967e4d0>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
+    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f9a2ee06fd0>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
   }
 }

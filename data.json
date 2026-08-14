@@ -9,10 +9,10 @@
         "totale": 3
       },
       "arancione": {
-        "in_attesa": 2,
-        "in_trattamento": 6,
+        "in_attesa": 0,
+        "in_trattamento": 9,
         "in_osservazione": 2,
-        "totale": 10
+        "totale": 11
       },
       "verde": {
         "in_attesa": 0,
@@ -32,8 +32,8 @@
       "indice_sovraffollamento": null
     },
     "totali": {
-      "in_attesa": 2,
-      "in_trattamento": 11,
+      "in_attesa": 0,
+      "in_trattamento": 14,
       "in_osservazione": 2
     }
   },
@@ -49,7 +49,7 @@
         "in_trattamento": 0
       },
       "verde": {
-        "in_attesa": 13,
+        "in_attesa": 14,
         "in_trattamento": 1
       },
       "bianco": {
@@ -58,12 +58,12 @@
       }
     },
     "totali": {
-      "pazienti": 21
+      "pazienti": 20
     },
     "extra": {
-      "accessi_giorno": 115,
-      "accessi_anno": 25708,
-      "indice_sovraffollamento": "325%"
+      "accessi_giorno": 118,
+      "accessi_anno": 25711,
+      "indice_sovraffollamento": "342%"
     }
   },
   "policlinico": {
@@ -77,20 +77,20 @@
       },
       "arancione": {
         "in_attesa": 2.0,
-        "in_trattamento": "5",
-        "carichi_urgenti": 20.0,
+        "in_trattamento": "4",
+        "carichi_urgenti": 15.0,
         "tempo_attesa": "2h  15m "
       },
       "azzurro": {
-        "in_attesa": 2.0,
+        "in_attesa": 3.0,
         "in_trattamento": "8",
-        "carichi_urgenti": 32.0,
+        "carichi_urgenti": 30.0,
         "tempo_attesa": "3h  18m "
       },
       "verde": {
-        "in_attesa": 8.0,
-        "in_trattamento": "11",
-        "carichi_urgenti": 44.0,
+        "in_attesa": 6.0,
+        "in_trattamento": "14",
+        "carichi_urgenti": 52.0,
         "tempo_attesa": "2h  5m "
       },
       "bianco": {
@@ -101,7 +101,7 @@
       }
     },
     "totali": {
-      "in_attesa": 12.0,
+      "in_attesa": 11.0,
       "in_trattamento": 0
     },
     "extra": {
@@ -119,6 +119,6 @@
     "errore": "HTTPSConnectionPool(host='www.ospedaliriunitipalermo.it', port=443): Max retries exceeded with url: /amministrazione-trasparente/servizi-erogati/liste-di-attesa/pazienti-in-attesa-al-pronto-soccorso/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ospedaliriunitipalermo.it', port=443): Failed to establish a new connection: [Errno 22] Invalid argument\"))"
   },
   "civico": {
-    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f88fe9d46d0>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
+    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7fe774e92d90>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
   }
 }

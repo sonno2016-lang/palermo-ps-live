@@ -16,9 +16,9 @@
       },
       "verde": {
         "in_attesa": 0,
-        "in_trattamento": 6,
+        "in_trattamento": 5,
         "in_osservazione": 0,
-        "totale": 6
+        "totale": 5
       },
       "bianco": {
         "in_attesa": 0,
@@ -33,7 +33,7 @@
     },
     "totali": {
       "in_attesa": 0,
-      "in_trattamento": 14,
+      "in_trattamento": 13,
       "in_osservazione": 2
     }
   },
@@ -49,7 +49,7 @@
         "in_trattamento": 0
       },
       "verde": {
-        "in_attesa": 32,
+        "in_attesa": 31,
         "in_trattamento": 1
       },
       "bianco": {
@@ -58,11 +58,11 @@
       }
     },
     "totali": {
-      "pazienti": 35
+      "pazienti": 34
     },
     "extra": {
-      "accessi_giorno": 3,
-      "accessi_anno": 25915,
+      "accessi_giorno": 5,
+      "accessi_anno": 25917,
       "indice_sovraffollamento": "467%"
     }
   },
@@ -77,20 +77,20 @@
       },
       "arancione": {
         "in_attesa": 0,
-        "in_trattamento": "5",
-        "carichi_urgenti": 25.0,
+        "in_trattamento": "3",
+        "carichi_urgenti": 18.0,
         "tempo_attesa": "2h  12m "
       },
       "azzurro": {
         "in_attesa": 1.0,
         "in_trattamento": "10",
-        "carichi_urgenti": 50.0,
+        "carichi_urgenti": 59.0,
         "tempo_attesa": "3h  13m "
       },
       "verde": {
         "in_attesa": 0,
-        "in_trattamento": "5",
-        "carichi_urgenti": 25.0,
+        "in_trattamento": "4",
+        "carichi_urgenti": 24.0,
         "tempo_attesa": "2h  6m "
       },
       "bianco": {
@@ -105,11 +105,11 @@
       "in_trattamento": 0
     },
     "extra": {
-      "permanenza_24h": 18,
+      "permanenza_24h": 15,
       "permanenza_24_48h": 3,
       "permanenza_oltre_24h": 1,
       "posti_tecnici_presidiati": 25,
-      "indice_sovraffollamento": 88.0
+      "indice_sovraffollamento": 76.0
     }
   },
   "villasofia": {
@@ -119,6 +119,6 @@
     "errore": "HTTPSConnectionPool(host='www.ospedaliriunitipalermo.it', port=443): Max retries exceeded with url: /amministrazione-trasparente/servizi-erogati/liste-di-attesa/pazienti-in-attesa-al-pronto-soccorso/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ospedaliriunitipalermo.it', port=443): Failed to establish a new connection: [Errno 22] Invalid argument\"))"
   },
   "civico": {
-    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7fb2a73a2690>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
+    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f7fc6da2650>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
   }
 }

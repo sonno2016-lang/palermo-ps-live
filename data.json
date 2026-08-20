@@ -49,7 +49,7 @@
         "in_trattamento": 0
       },
       "verde": {
-        "in_attesa": 0,
+        "in_attesa": 1,
         "in_trattamento": 2
       },
       "bianco": {
@@ -58,12 +58,12 @@
       }
     },
     "totali": {
-      "pazienti": 0
+      "pazienti": 1
     },
     "extra": {
-      "accessi_giorno": 4,
-      "accessi_anno": 26438,
-      "indice_sovraffollamento": "150%"
+      "accessi_giorno": 5,
+      "accessi_anno": 26439,
+      "indice_sovraffollamento": "158%"
     }
   },
   "policlinico": {
@@ -82,7 +82,7 @@
         "tempo_attesa": "2h  15m "
       },
       "azzurro": {
-        "in_attesa": 8.0,
+        "in_attesa": 9.0,
         "in_trattamento": "10",
         "carichi_urgenti": 36.0,
         "tempo_attesa": "3h  18m "
@@ -101,15 +101,15 @@
       }
     },
     "totali": {
-      "in_attesa": 16.0,
+      "in_attesa": 17.0,
       "in_trattamento": 0
     },
     "extra": {
       "permanenza_24h": 44,
-      "permanenza_24_48h": 4,
+      "permanenza_24_48h": 5,
       "permanenza_oltre_24h": 3,
       "posti_tecnici_presidiati": 25,
-      "indice_sovraffollamento": 204.0
+      "indice_sovraffollamento": 208.0
     }
   },
   "villasofia": {
@@ -119,6 +119,6 @@
     "errore": "HTTPSConnectionPool(host='www.ospedaliriunitipalermo.it', port=443): Max retries exceeded with url: /amministrazione-trasparente/servizi-erogati/liste-di-attesa/pazienti-in-attesa-al-pronto-soccorso/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ospedaliriunitipalermo.it', port=443): Failed to establish a new connection: [Errno 22] Invalid argument\"))"
   },
   "civico": {
-    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f2f57092b10>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
+    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f061ec3e350>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
   }
 }

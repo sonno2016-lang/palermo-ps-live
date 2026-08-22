@@ -1,6 +1,41 @@
 {
   "ingrassia": {
-    "errore": "HTTPSConnectionPool(host='www.asppalermo.org', port=443): Max retries exceeded with url: /attese_ps/index_mod2.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.asppalermo.org', port=443) at 0x7f7143ae6210>, 'Connection to www.asppalermo.org timed out. (connect timeout=12)'))"
+    "nome": "Palermo - Ingrassia",
+    "data": {
+      "rosso": {
+        "in_attesa": 0,
+        "in_trattamento": 3,
+        "in_osservazione": 0,
+        "totale": 3
+      },
+      "arancione": {
+        "in_attesa": 0,
+        "in_trattamento": 2,
+        "in_osservazione": 1,
+        "totale": 3
+      },
+      "verde": {
+        "in_attesa": 0,
+        "in_trattamento": 2,
+        "in_osservazione": 2,
+        "totale": 4
+      },
+      "bianco": {
+        "in_attesa": 0,
+        "in_trattamento": 0,
+        "in_osservazione": 0,
+        "totale": 0
+      }
+    },
+    "extra": {
+      "numero_posti_tecnico": null,
+      "indice_sovraffollamento": null
+    },
+    "totali": {
+      "in_attesa": 0,
+      "in_trattamento": 7,
+      "in_osservazione": 3
+    }
   },
   "buccheri": {
     "nome": "Palermo - Buccheri La Ferla",
@@ -37,19 +72,19 @@
       "rosso": {
         "in_attesa": 0,
         "in_trattamento": "3",
-        "carichi_urgenti": 9.0,
+        "carichi_urgenti": 8.0,
         "tempo_attesa": "22m "
       },
       "arancione": {
-        "in_attesa": 2.0,
-        "in_trattamento": "13",
-        "carichi_urgenti": 37.0,
+        "in_attesa": 0,
+        "in_trattamento": "15",
+        "carichi_urgenti": 42.0,
         "tempo_attesa": "2h  15m "
       },
       "azzurro": {
-        "in_attesa": 5.0,
-        "in_trattamento": "19",
-        "carichi_urgenti": 54.0,
+        "in_attesa": 4.0,
+        "in_trattamento": "18",
+        "carichi_urgenti": 50.0,
         "tempo_attesa": "3h  26m "
       },
       "verde": {
@@ -66,15 +101,15 @@
       }
     },
     "totali": {
-      "in_attesa": 10.0,
+      "in_attesa": 7.0,
       "in_trattamento": 0
     },
     "extra": {
-      "permanenza_24h": 37,
+      "permanenza_24h": 35,
       "permanenza_24_48h": 8,
       "permanenza_oltre_24h": 2,
       "posti_tecnici_presidiati": 25,
-      "indice_sovraffollamento": 188.0
+      "indice_sovraffollamento": 180.0
     }
   },
   "villasofia": {
@@ -84,6 +119,6 @@
     "errore": "HTTPSConnectionPool(host='www.ospedaliriunitipalermo.it', port=443): Max retries exceeded with url: /amministrazione-trasparente/servizi-erogati/liste-di-attesa/pazienti-in-attesa-al-pronto-soccorso/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ospedaliriunitipalermo.it', port=443): Failed to establish a new connection: [Errno 22] Invalid argument\"))"
   },
   "civico": {
-    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f7143b07350>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
+    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f0c2fe32990>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
   }
 }

@@ -3,16 +3,16 @@
     "nome": "Palermo - Ingrassia",
     "data": {
       "rosso": {
-        "in_attesa": 0,
-        "in_trattamento": 3,
+        "in_attesa": 1,
+        "in_trattamento": 4,
         "in_osservazione": 0,
-        "totale": 3
+        "totale": 5
       },
       "arancione": {
         "in_attesa": 3,
-        "in_trattamento": 9,
+        "in_trattamento": 7,
         "in_osservazione": 2,
-        "totale": 14
+        "totale": 12
       },
       "verde": {
         "in_attesa": 0,
@@ -22,9 +22,9 @@
       },
       "bianco": {
         "in_attesa": 0,
-        "in_trattamento": 3,
+        "in_trattamento": 2,
         "in_osservazione": 0,
-        "totale": 3
+        "totale": 2
       }
     },
     "extra": {
@@ -32,8 +32,8 @@
       "indice_sovraffollamento": null
     },
     "totali": {
-      "in_attesa": 3,
-      "in_trattamento": 19,
+      "in_attesa": 4,
+      "in_trattamento": 17,
       "in_osservazione": 2
     }
   },
@@ -49,8 +49,8 @@
         "in_trattamento": 0
       },
       "verde": {
-        "in_attesa": 8,
-        "in_trattamento": 4
+        "in_attesa": 6,
+        "in_trattamento": 5
       },
       "bianco": {
         "in_attesa": 1,
@@ -58,39 +58,39 @@
       }
     },
     "totali": {
-      "pazienti": 30
+      "pazienti": 27
     },
     "extra": {
-      "accessi_giorno": 115,
-      "accessi_anno": 26891,
-      "indice_sovraffollamento": "415%"
+      "accessi_giorno": 118,
+      "accessi_anno": 26894,
+      "indice_sovraffollamento": "400%"
     }
   },
   "policlinico": {
     "nome": "Palermo - Policlinico",
     "data": {
       "rosso": {
-        "in_attesa": 0,
-        "in_trattamento": "4",
-        "carichi_urgenti": 11.0,
+        "in_attesa": 1.0,
+        "in_trattamento": "3",
+        "carichi_urgenti": 8.0,
         "tempo_attesa": "20m "
       },
       "arancione": {
-        "in_attesa": 5.0,
-        "in_trattamento": "9",
-        "carichi_urgenti": 26.0,
+        "in_attesa": 4.0,
+        "in_trattamento": "12",
+        "carichi_urgenti": 33.0,
         "tempo_attesa": "2h  15m "
       },
       "azzurro": {
-        "in_attesa": 11.0,
-        "in_trattamento": "13",
-        "carichi_urgenti": 37.0,
+        "in_attesa": 12.0,
+        "in_trattamento": "14",
+        "carichi_urgenti": 39.0,
         "tempo_attesa": "3h  20m "
       },
       "verde": {
         "in_attesa": 5.0,
-        "in_trattamento": "9",
-        "carichi_urgenti": 26.0,
+        "in_trattamento": "7",
+        "carichi_urgenti": 19.0,
         "tempo_attesa": "2h  4m "
       },
       "bianco": {
@@ -101,12 +101,12 @@
       }
     },
     "totali": {
-      "in_attesa": 21.0,
+      "in_attesa": 22.0,
       "in_trattamento": 0
     },
     "extra": {
-      "permanenza_24h": 50,
-      "permanenza_24_48h": 4,
+      "permanenza_24h": 51,
+      "permanenza_24_48h": 3,
       "permanenza_oltre_24h": 8,
       "posti_tecnici_presidiati": 25,
       "indice_sovraffollamento": 248.0
@@ -119,6 +119,6 @@
     "errore": "HTTPSConnectionPool(host='www.ospedaliriunitipalermo.it', port=443): Max retries exceeded with url: /amministrazione-trasparente/servizi-erogati/liste-di-attesa/pazienti-in-attesa-al-pronto-soccorso/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ospedaliriunitipalermo.it', port=443): Failed to establish a new connection: [Errno 22] Invalid argument\"))"
   },
   "civico": {
-    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7fcb7a12fb90>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
+    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7fb65ebb9dd0>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
   }
 }

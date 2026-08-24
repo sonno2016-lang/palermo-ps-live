@@ -9,8 +9,8 @@
         "totale": 7
       },
       "arancione": {
-        "in_attesa": 7,
-        "in_trattamento": 9,
+        "in_attesa": 5,
+        "in_trattamento": 11,
         "in_osservazione": 2,
         "totale": 18
       },
@@ -32,8 +32,8 @@
       "indice_sovraffollamento": null
     },
     "totali": {
-      "in_attesa": 9,
-      "in_trattamento": 17,
+      "in_attesa": 7,
+      "in_trattamento": 19,
       "in_osservazione": 3
     }
   },
@@ -58,12 +58,12 @@
       }
     },
     "totali": {
-      "pazienti": 17
+      "pazienti": 16
     },
     "extra": {
       "accessi_giorno": 3,
       "accessi_anno": 26936,
-      "indice_sovraffollamento": "325%"
+      "indice_sovraffollamento": "300%"
     }
   },
   "policlinico": {
@@ -72,20 +72,20 @@
       "rosso": {
         "in_attesa": 0,
         "in_trattamento": "7",
-        "carichi_urgenti": 22.0,
+        "carichi_urgenti": 21.0,
         "tempo_attesa": "20m "
       },
       "arancione": {
-        "in_attesa": 1.0,
-        "in_trattamento": "17",
+        "in_attesa": 0,
+        "in_trattamento": "18",
         "carichi_urgenti": 53.0,
         "tempo_attesa": "2h  17m "
       },
       "azzurro": {
-        "in_attesa": 11.0,
-        "in_trattamento": "7",
-        "carichi_urgenti": 22.0,
-        "tempo_attesa": "3h  22m "
+        "in_attesa": 10.0,
+        "in_trattamento": "8",
+        "carichi_urgenti": 24.0,
+        "tempo_attesa": "3h  23m "
       },
       "verde": {
         "in_attesa": 12.0,
@@ -101,7 +101,7 @@
       }
     },
     "totali": {
-      "in_attesa": 24.0,
+      "in_attesa": 22.0,
       "in_trattamento": 0
     },
     "extra": {
@@ -119,6 +119,6 @@
     "errore": "HTTPSConnectionPool(host='www.ospedaliriunitipalermo.it', port=443): Max retries exceeded with url: /amministrazione-trasparente/servizi-erogati/liste-di-attesa/pazienti-in-attesa-al-pronto-soccorso/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ospedaliriunitipalermo.it', port=443): Failed to establish a new connection: [Errno 22] Invalid argument\"))"
   },
   "civico": {
-    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f15a9956290>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
+    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7ff1d1802890>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
   }
 }

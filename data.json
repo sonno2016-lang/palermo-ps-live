@@ -3,22 +3,22 @@
     "nome": "Palermo - Ingrassia",
     "data": {
       "rosso": {
-        "in_attesa": 2,
-        "in_trattamento": 7,
+        "in_attesa": 0,
+        "in_trattamento": 9,
         "in_osservazione": 0,
         "totale": 9
       },
       "arancione": {
-        "in_attesa": 8,
-        "in_trattamento": 8,
+        "in_attesa": 7,
+        "in_trattamento": 7,
         "in_osservazione": 2,
-        "totale": 18
+        "totale": 16
       },
       "verde": {
-        "in_attesa": 1,
+        "in_attesa": 4,
         "in_trattamento": 1,
         "in_osservazione": 0,
-        "totale": 2
+        "totale": 5
       },
       "bianco": {
         "in_attesa": 0,
@@ -33,7 +33,7 @@
     },
     "totali": {
       "in_attesa": 11,
-      "in_trattamento": 17,
+      "in_trattamento": 18,
       "in_osservazione": 2
     }
   },
@@ -49,7 +49,7 @@
         "in_trattamento": 0
       },
       "verde": {
-        "in_attesa": 11,
+        "in_attesa": 14,
         "in_trattamento": 2
       },
       "bianco": {
@@ -58,12 +58,12 @@
       }
     },
     "totali": {
-      "pazienti": 28
+      "pazienti": 25
     },
     "extra": {
-      "accessi_giorno": 137,
-      "accessi_anno": 26913,
-      "indice_sovraffollamento": "433%"
+      "accessi_giorno": 144,
+      "accessi_anno": 26920,
+      "indice_sovraffollamento": "400%"
     }
   },
   "policlinico": {
@@ -71,45 +71,45 @@
     "data": {
       "rosso": {
         "in_attesa": 0,
-        "in_trattamento": "4",
-        "carichi_urgenti": 13.0,
+        "in_trattamento": "6",
+        "carichi_urgenti": 21.0,
         "tempo_attesa": "20m "
       },
       "arancione": {
-        "in_attesa": 4.0,
+        "in_attesa": 6.0,
         "in_trattamento": "12",
-        "carichi_urgenti": 38.0,
+        "carichi_urgenti": 41.0,
         "tempo_attesa": "2h  15m "
       },
       "azzurro": {
-        "in_attesa": 17.0,
-        "in_trattamento": "9",
-        "carichi_urgenti": 28.0,
+        "in_attesa": 16.0,
+        "in_trattamento": "6",
+        "carichi_urgenti": 21.0,
         "tempo_attesa": "3h  20m "
       },
       "verde": {
-        "in_attesa": 7.0,
-        "in_trattamento": "7",
-        "carichi_urgenti": 22.0,
+        "in_attesa": 8.0,
+        "in_trattamento": "5",
+        "carichi_urgenti": 17.0,
         "tempo_attesa": "2h  4m "
       },
       "bianco": {
         "in_attesa": 0,
         "in_trattamento": 0,
         "carichi_urgenti": 0.0,
-        "tempo_attesa": "3h  4m "
+        "tempo_attesa": "3h  3m "
       }
     },
     "totali": {
-      "in_attesa": 28.0,
+      "in_attesa": 30.0,
       "in_trattamento": 0
     },
     "extra": {
-      "permanenza_24h": 53,
+      "permanenza_24h": 52,
       "permanenza_24_48h": 2,
       "permanenza_oltre_24h": 9,
       "posti_tecnici_presidiati": 25,
-      "indice_sovraffollamento": 256.0
+      "indice_sovraffollamento": 252.0
     }
   },
   "villasofia": {
@@ -119,6 +119,6 @@
     "errore": "HTTPSConnectionPool(host='www.ospedaliriunitipalermo.it', port=443): Max retries exceeded with url: /amministrazione-trasparente/servizi-erogati/liste-di-attesa/pazienti-in-attesa-al-pronto-soccorso/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ospedaliriunitipalermo.it', port=443): Failed to establish a new connection: [Errno 22] Invalid argument\"))"
   },
   "civico": {
-    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f645b403310>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
+    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f9fc9535f50>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
   }
 }

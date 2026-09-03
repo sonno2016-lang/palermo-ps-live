@@ -42,15 +42,15 @@
     "data": {
       "rosso": {
         "in_attesa": 0,
-        "in_trattamento": 3
+        "in_trattamento": 4
       },
       "giallo": {
         "in_attesa": 0,
         "in_trattamento": 0
       },
       "verde": {
-        "in_attesa": 4,
-        "in_trattamento": 6
+        "in_attesa": 3,
+        "in_trattamento": 3
       },
       "bianco": {
         "in_attesa": 0,
@@ -58,16 +58,59 @@
       }
     },
     "totali": {
-      "pazienti": 7
+      "pazienti": 13
     },
     "extra": {
-      "accessi_giorno": 33,
-      "accessi_anno": 28104,
-      "indice_sovraffollamento": "292%"
+      "accessi_giorno": 60,
+      "accessi_anno": 28131,
+      "indice_sovraffollamento": "315%"
     }
   },
   "policlinico": {
-    "errore": "HTTPSConnectionPool(host='www.policlinico.pa.it', port=443): Max retries exceeded with url: /o/PoliclinicoPaRestBuilder/v1.0/ProntoSoccorsoIndici (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.policlinico.pa.it', port=443) at 0x7f37fc1def50>, 'Connection to www.policlinico.pa.it timed out. (connect timeout=12)'))"
+    "nome": "Palermo - Policlinico",
+    "data": {
+      "rosso": {
+        "in_attesa": 0,
+        "in_trattamento": "1",
+        "carichi_urgenti": 3.0,
+        "tempo_attesa": "19m "
+      },
+      "arancione": {
+        "in_attesa": 1.0,
+        "in_trattamento": "8",
+        "carichi_urgenti": 21.0,
+        "tempo_attesa": "2h  5m "
+      },
+      "azzurro": {
+        "in_attesa": 12.0,
+        "in_trattamento": "16",
+        "carichi_urgenti": 42.0,
+        "tempo_attesa": "3h  18m "
+      },
+      "verde": {
+        "in_attesa": 7.0,
+        "in_trattamento": "13",
+        "carichi_urgenti": 34.0,
+        "tempo_attesa": "1h  55m "
+      },
+      "bianco": {
+        "in_attesa": 0,
+        "in_trattamento": 0,
+        "carichi_urgenti": 0.0,
+        "tempo_attesa": "2h  57m "
+      }
+    },
+    "totali": {
+      "in_attesa": 20.0,
+      "in_trattamento": 0
+    },
+    "extra": {
+      "permanenza_24h": 57,
+      "permanenza_24_48h": 4,
+      "permanenza_oltre_24h": 2,
+      "posti_tecnici_presidiati": 25,
+      "indice_sovraffollamento": 252.0
+    }
   },
   "villasofia": {
     "errore": "HTTPSConnectionPool(host='www.ospedaliriunitipalermo.it', port=443): Max retries exceeded with url: /amministrazione-trasparente/servizi-erogati/liste-di-attesa/pazienti-in-attesa-al-pronto-soccorso/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ospedaliriunitipalermo.it', port=443): Failed to establish a new connection: [Errno 22] Invalid argument\"))"
@@ -76,6 +119,6 @@
     "errore": "HTTPSConnectionPool(host='www.ospedaliriunitipalermo.it', port=443): Max retries exceeded with url: /amministrazione-trasparente/servizi-erogati/liste-di-attesa/pazienti-in-attesa-al-pronto-soccorso/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ospedaliriunitipalermo.it', port=443): Failed to establish a new connection: [Errno 22] Invalid argument\"))"
   },
   "civico": {
-    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f37fc3365d0>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
+    "errore": "HTTPSConnectionPool(host='www.arnascivico.it', port=443): Max retries exceeded with url: /index.php?option=com_content&view=article&id=3415&catid=24&Itemid=139 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.arnascivico.it', port=443) at 0x7f030326e0d0>, 'Connection to www.arnascivico.it timed out. (connect timeout=12)'))"
   }
 }
